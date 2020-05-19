@@ -5,46 +5,46 @@
 
 int main(void)
 {
-    int m, n[MAX_LEN], proverka;
-    printf("Введите размерность массивов: ");
+    int m, n[MAX_LEN], check;
+    printf("Enter the dimension of the arrays: ");
     scanf("%d", &m);
     while (m <= 0 || m > MAX_LEN)
     {
-        printf("Размерность массивов должна быть >0 и <%d: ", MAX_LEN);
+        printf("Array dimension should be >0 и <%d: ", MAX_LEN);
         scanf("%d", &m);
     }
     for (int i = 0; i < m; i++)
     {
-        printf("Введите %d элемент массива n : ", i + 1);
+        printf("Enter %d array element n : ", i + 1);
         scanf("%d", &n[i]);
         while (n[i] == 0)
         {
-            printf("Элемент не должен быть равен нулю. Повторите ввод: ");
+            printf("The item must not be zero. Repeat Entry: ");
             scanf("%d", &n[i]);
         }
     }
     if (n[0] > 0)
     {
-        proverka = 1;
+        check = 1;
     }
     else
     {
-        proverka = -1;
+        check = -1;
     }
 
     for (int i = 1; i < m; i++)
     {
-        if (n[i] > 0 && proverka < 0)
+        if (n[i] > 0 && check < 0)
         {
-            proverka = 1;
+            check = 1;
         }
-        else if (n[i] < 0 && proverka>0)
+        else if (n[i] < 0 && check>0)
         {
-            proverka = -1;
+            check = -1;
         }
         else
         {
-            proverka = 0;
+            check = 0;
             break;
         }
     }
@@ -62,7 +62,7 @@ int main(void)
             max = n[i];
         }
     }
-    if (proverka == 1 || proverka == -1)
+    if (check == 1 || check == -1)
     {
         for (int i = 0; i < m; i++)
         {
