@@ -9,7 +9,7 @@ int main()
 	f = fopen("input.txt", "r");
 	if (f == NULL)
 	{
-		printf("Oshibka otktya fayla\n");
+		printf("Error opening file\n");
 		return 1;
 	}
 	while (fscanf(f, "%d", &n[i])!=EOF)
@@ -26,7 +26,7 @@ int main()
 	f = fopen("output.txt", "w");
 	if (f == NULL)
 	{
-		printf("Oshibka otktya fayla\n");
+		printf("Error opening file\n");
 		return 2;
 	}
 	fprintf(f, "%d", sum / i);
