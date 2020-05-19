@@ -6,7 +6,7 @@
 int main(void)
 {
 	int m, n[MAX_LEN];
-	float x[MAX_LEN], chislitel=0,znamenatel=0;
+	float x[MAX_LEN], numerator=0,denominator=0;
 	printf("Введите размерность массивов: ");
 	scanf("%d", &m);
 	while (m < 0 || m>MAX_LEN)
@@ -32,9 +32,9 @@ int main(void)
 	}
 	for (int i = 0; i < m; i++)
 	{
-		chislitel += x[i] * n[i];
-		znamenatel += n[i];
+		numerator += x[i] * n[i];
+		denominator += n[i];
 	}
-	printf("Результат: %f", chislitel / znamenatel);
+	printf("Результат: %f", numerator / denominator);
 	return 0;
 }
