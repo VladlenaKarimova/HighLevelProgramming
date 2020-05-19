@@ -7,27 +7,27 @@ int main(void)
 {
 	int m, n[MAX_LEN];
 	float x[MAX_LEN], numerator=0,denominator=0;
-	printf("Введите размерность массивов: ");
+	printf("Enter the dimension of the arrays: ");
 	scanf("%d", &m);
 	while (m < 0 || m>MAX_LEN)
 	{
-		printf("Размерность массивов должна быть >0 и <%d: ",MAX_LEN);
+		printf("Array dimension should be >0 и <%d: ",MAX_LEN);
 		scanf("%d", &m);
 	}
 	for (int i=0; i<m; i++)
 	{
-		printf("Введите %d элемент массива n : ",i+1);
+		printf("Enter %d array element n : ",i+1);
 		scanf("%d", &n[i]);
 
 		while (n[i] < 0 )
 		{
-			printf("Натуральное число: ");
+			printf("Natural number: ");
 			scanf("%d", &n[i]);
 		}
 	}
 	for (int i = 0; i < m; i++)
 	{
-		printf("Введите %d элемент массива x : ", i + 1);
+		printf("Enter %d array element x : ", i + 1);
 		scanf("%f", &x[i]);
 	}
 	for (int i = 0; i < m; i++)
